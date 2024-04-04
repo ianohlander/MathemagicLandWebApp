@@ -26,7 +26,7 @@
       
         ], function(esriConfig, Map, MapView, FeatureLayer) {
       
-        esriConfig.apiKey = "YOUR_API_KEY";
+        //esriConfig.apiKey = "YOUR_API_KEY";
       
         const map = new Map({
           basemap: "arcgis/topographic"
@@ -44,14 +44,14 @@
           url: "https://services8.arcgis.com/bakuPBfBg2h4o61q/ArcGIS/rest/services/Mathemagic_Land/FeatureServer/0"
         });
       
-        //map.add(trailheadsLayer);
+        map.add(trailheadsLayer);
       
       //Trails feature layer (lines)
         const trailsLayer = new FeatureLayer({
-          url: "https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Trails/FeatureServer/0"
+          url: "https://services8.arcgis.com/bakuPBfBg2h4o61q/ArcGIS/rest/services/Mathemagic_Land/FeatureServer/1"
         });
       
-        //map.add(trailsLayer, 0);
+        map.add(trailsLayer, 0);
       
       // Parks and open spaces (polygons)
         const parksLayer = new FeatureLayer({
